@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">go_with_dog</string>
+
+    // naver login key string
+    <string name="naver_client_id">7FqNdStEbLxeIeH0FcSw</string>
+    <string name="naver_client_secret">L2rTzOkayi</string>
+    <string name="naver_client_name">같이가개</string>
 </resources>
