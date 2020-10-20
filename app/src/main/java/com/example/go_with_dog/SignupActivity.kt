@@ -3,21 +3,19 @@ package com.example.go_with_dog
 import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat.startActivity
 import androidx.databinding.DataBindingUtil
 import com.example.go_with_dog.databinding.ActivityNaverLoginBinding
 import com.nhn.android.naverlogin.OAuthLogin
 import com.nhn.android.naverlogin.OAuthLoginHandler
 import timber.log.Timber
 
-class NaverLoginActivity : AppCompatActivity() {
+class SignupActivity : AppCompatActivity() {
     private lateinit var binding: ActivityNaverLoginBinding
     private lateinit var mOAuthLoginModule: OAuthLogin
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_naver_login)
-        binding.naverBtn.setBgResourceId(R.drawable.naver_login_btn_logout)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_signup)
         initLoginModule()
 
         binding.naverBtn.setOnClickListener {
@@ -25,10 +23,6 @@ class NaverLoginActivity : AppCompatActivity() {
                     this,
                     NaverOAuthLoginHandler(mOAuthLoginModule,
                             this))
-        }
-
-        binding.naverLogoutBtn.setOnClickListener {
-            mOAuthLoginModule.logout(this)
         }
     }
 
@@ -44,7 +38,6 @@ class NaverLoginActivity : AppCompatActivity() {
 
     // accessToken이 유효한 경우도 처리해야할까?
     // 공식 문서에는 refreshToken의 유효값만 확인 후 처리하는 것 같은데
-    // 확인 필요
     class NaverOAuthLoginHandler(
             private val loginModule: OAuthLogin,
             private val context: Context
@@ -60,6 +53,8 @@ class NaverLoginActivity : AppCompatActivity() {
                 Timber.d(refreshToken)
                 Timber.d(expiresAt.toString())
                 Timber.d(tokenType)
+
+                // SharedPreference에 토큰 값 입력하는 코드 추가 필요
 
 //                startActivity()
             } else {
