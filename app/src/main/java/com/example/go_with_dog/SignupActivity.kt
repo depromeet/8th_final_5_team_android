@@ -2,15 +2,16 @@ package com.example.go_with_dog
 
 import android.content.Context
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.example.go_with_dog.databinding.ActivityNaverLoginBinding
+import com.example.go_with_dog.databinding.ActivitySignupBinding
 import com.nhn.android.naverlogin.OAuthLogin
 import com.nhn.android.naverlogin.OAuthLoginHandler
 import timber.log.Timber
 
 class SignupActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityNaverLoginBinding
+    private lateinit var binding: ActivitySignupBinding
     private lateinit var mOAuthLoginModule: OAuthLogin
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -48,6 +49,8 @@ class SignupActivity : AppCompatActivity() {
                 val refreshToken = loginModule.getRefreshToken(context)
                 val expiresAt = loginModule.getExpiresAt(context)
                 val tokenType = loginModule.getTokenType(context)
+
+                Toast.makeText(context, "액세스 토큰: " + accessToken.toString(), Toast.LENGTH_LONG).show()
 
                 Timber.d(accessToken)
                 Timber.d(refreshToken)
