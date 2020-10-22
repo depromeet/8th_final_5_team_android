@@ -1,22 +1,18 @@
 package com.example.go_with_dog
 
-import android.content.Context
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import com.example.go_with_dog.databinding.ActivitySignupBinding
+import com.example.go_with_dog.databinding.ActivityLoginBinding
 import com.nhn.android.naverlogin.OAuthLogin
-import com.nhn.android.naverlogin.OAuthLoginHandler
-import timber.log.Timber
 
-class SignupActivity : AppCompatActivity() {
-    private lateinit var binding: ActivitySignupBinding
+class LoginActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityLoginBinding
     private val mOAuthLoginModule: OAuthLogin by lazy {
         OAuthLogin.getInstance().apply {
             init(
-                    this@SignupActivity
+                    this@LoginActivity
                     , getString(R.string.naver_client_id)
                     , getString(R.string.naver_client_secret)
                     , getString(R.string.naver_client_name)
@@ -26,7 +22,7 @@ class SignupActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_signup)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_login)
     }
 
     fun startNaverLogin(view: View) {
