@@ -13,11 +13,5 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        /*
-        아래와 같이 사용하세요
-        binding = getDataBinding()
-        binding.mainText.text = "123"
-        */
     }
 }
