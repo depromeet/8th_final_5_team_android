@@ -1,2 +1,2 @@
-include ':app'
+include ':local', ':remote', ':data', ':domain', ':presentation'
 rootProject.name = "go_with_dog"
