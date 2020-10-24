@@ -4,7 +4,7 @@ import android.content.Context
 import android.widget.Toast
 import com.nhn.android.naverlogin.OAuthLogin
 import com.nhn.android.naverlogin.OAuthLoginHandler
-import timber.log.Timber
+import com.orhanobut.logger.Logger
 
 class NaverOAuthLoginHandler(
     private val loginModule: OAuthLogin,
@@ -19,20 +19,16 @@ class NaverOAuthLoginHandler(
 
             Toast.makeText(context, "액세스 토큰: " + accessToken.toString(), Toast.LENGTH_LONG).show()
 
-            Timber.d(accessToken)
-            Timber.d(refreshToken)
-            Timber.d(expiresAt.toString())
-            Timber.d(tokenType)
-
-            // SharedPreference에 토큰 값 입력하는 코드 추가 필요
-
-//                startActivity()
+            Logger.d(accessToken)
+            Logger.d(refreshToken)
+            Logger.d(expiresAt.toString())
+            Logger.d(tokenType)
         } else {
             val errorCode = loginModule.getLastErrorCode(context).code
             val errorDesc = loginModule.getLastErrorDesc(context)
 
-            Timber.d(errorCode)
-            Timber.d(errorDesc)
+            Logger.d(errorCode)
+            Logger.d(errorDesc)
         }
     }
 }
