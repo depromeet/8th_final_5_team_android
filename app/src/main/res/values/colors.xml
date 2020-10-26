@@ -5,4 +5,6 @@
     <color name="black_2">#999999</color>
     <color name="black_3">#D3D3D3</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="naver_green">#21CD62</color>
 </resources>
