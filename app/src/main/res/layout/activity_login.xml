@@ -8,42 +8,37 @@
         android:orientation="vertical">
 
         <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/login_pager"
+            android:id="@+id/vp_login"
             android:layout_width="0dp"
-            android:layout_height="390dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="12dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btn_naver_login"/>
 
-        <LinearLayout
-            android:id="@+id/login_naver_btn"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_naver_login"
             android:layout_width="0dp"
             android:layout_height="46dp"
-            android:orientation="horizontal"
-            android:background="@drawable/round_rectangle"
-            android:backgroundTint="@color/green"
-            android:gravity="center"
-            android:onClick="startNaverLogin"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="36dp"
+            android:backgroundTint="@color/naver_green"
+            android:gravity="center"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:text="@string/start_naver"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:cornerRadius="8dp"
+            app:icon="@drawable/ic_naver"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_pager">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_naver" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/start_naver"
-                android:textSize="16dp"
-                android:textColor="@color/white"
-                android:layout_marginLeft="8dp"/>
-
-        </LinearLayout>
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
