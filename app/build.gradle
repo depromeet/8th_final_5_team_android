@@ -53,7 +53,10 @@ dependencies {
     // library for logging
     implementation 'com.orhanobut:logger:2.2.0'
 
-    //coroutines library
+    // Coroutines library
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.9'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9'
+
+    // Life-cycle Extension
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
 }

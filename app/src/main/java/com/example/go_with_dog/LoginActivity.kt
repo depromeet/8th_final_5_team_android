@@ -7,15 +7,11 @@ import com.example.go_with_dog.base.BaseActivity
 import com.example.go_with_dog.databinding.ActivityLoginBinding
 import com.nhn.android.naverlogin.OAuthLogin
 
-class LoginActivity : BaseActivity<ActivityLoginBinding>() {
-    private val binding: ActivityLoginBinding by lazy {
-        getDataBinding()
-    }
-
-    private val viewModel: LoginViewModel by lazy {
-        ViewModelProvider(this, ViewModelProvider.NewInstanceFactory())
-            .get(LoginViewModel::class.java)
-    }
+class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>() {
+    override val layoutId: Int
+        get() = R.layout.activity_login
+    override val viewModel: LoginViewModel
+        get() = ViewModelProvider(this).get(LoginViewModel::class.java)
 
     private val mOAuthLoginModule: OAuthLogin by lazy {
         OAuthLogin.getInstance().apply {
@@ -28,14 +24,10 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
         }
     }
 
-    override fun getLayoutId(): Int {
-        return R.layout.activity_login
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding.viewModel = viewModel
+        dataBinding.viewModel = viewModel
         setObserveLiveData()
     }
 

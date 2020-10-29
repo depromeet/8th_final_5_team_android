@@ -6,11 +6,13 @@ import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import com.example.go_with_dog.BR
 
-abstract class BaseActivity<T : ViewDataBinding>: AppCompatActivity(){
-    private lateinit var dataBinding: T
+abstract class BaseActivity<T: ViewDataBinding, E: ViewModel>: AppCompatActivity(){
+    protected lateinit var dataBinding: T
 
-    abstract fun getLayoutId(): Int
+    abstract val layoutId: Int
+    abstract val viewModel: E
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,11 +21,10 @@ abstract class BaseActivity<T : ViewDataBinding>: AppCompatActivity(){
     }
 
     private fun initDataBinding() {
-        dataBinding = DataBindingUtil.setContentView(this, getLayoutId())
+        dataBinding = DataBindingUtil.setContentView(this, layoutId)
         dataBinding.lifecycleOwner = this
-    }
 
-    fun getDataBinding(): T {
-        return dataBinding
+        // 만약 xml variable에 viewModel을 선언하지 않았다면?
+        dataBinding.setVariable(BR.viewModel, viewModel)
     }
 }
