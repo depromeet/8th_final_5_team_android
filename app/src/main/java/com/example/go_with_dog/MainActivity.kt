@@ -1,6 +1,5 @@
 package com.example.go_with_dog
 
-import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import com.example.go_with_dog.base.BaseActivity
 import com.example.go_with_dog.databinding.ActivityMainBinding

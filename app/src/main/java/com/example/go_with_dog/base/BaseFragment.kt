@@ -7,24 +7,24 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModel
+import com.example.go_with_dog.BR
 
-abstract class BaseFragment<T: ViewDataBinding>: Fragment() {
-    private lateinit var binding: T
+abstract class BaseFragment<T: ViewDataBinding, E: ViewModel>: Fragment() {
+    lateinit var dataBinding: T
 
-    abstract fun getLayoutId(): Int
+    abstract val layoutId: Int
+    abstract val viewModel: E
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = DataBindingUtil.inflate(inflater, getLayoutId(), container, false)
-        binding.lifecycleOwner = this
+        dataBinding = DataBindingUtil.inflate(inflater, layoutId, container, false)
+        dataBinding.lifecycleOwner = this
+        dataBinding.setVariable(BR.viewModel, viewModel)
 
-        return binding.root
-    }
-
-    fun getDataBinding(): T {
-        return binding
+        return dataBinding.root
     }
 }

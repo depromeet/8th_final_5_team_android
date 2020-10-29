@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.go_with_dog.BR
 
 abstract class BaseActivity<T: ViewDataBinding, E: ViewModel>: AppCompatActivity(){
-    protected lateinit var dataBinding: T
+    lateinit var dataBinding: T
 
     abstract val layoutId: Int
     abstract val viewModel: E

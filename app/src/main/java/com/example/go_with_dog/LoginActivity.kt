@@ -28,10 +28,10 @@ class LoginActivity : BaseActivity<ActivityLoginBinding, LoginViewModel>() {
         super.onCreate(savedInstanceState)
 
         dataBinding.viewModel = viewModel
-        setObserveLiveData()
+        observeLiveData()
     }
 
-    private fun setObserveLiveData() {
+    private fun observeLiveData() {
         viewModel.doNaverLogin.observe(this, Observer {
             startNaverLogin()
         })
