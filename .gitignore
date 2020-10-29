@@ -49,13 +49,9 @@ captures/
 # Android Studio 3 in .gitignore file.
 .idea/caches
 .idea/modules.xml
-<<<<<<< HEAD
 .idea/jarRepositories.xml
 .idea/shelf/
 .idea/.name
-=======
->>>>>>> c9b7f41d67f63f2f2958569dcf237ca6d3cda82d
-.idea/misc.xml
 # Comment next line if keeping position of elements in Navigation Editor is relevant for you
 .idea/navEditor.xml
 .idea/*
@@ -101,4 +97,3 @@ Project.xml
 codeStyles/*
 codeStyleConfig.xml
 Project_Default.xml
-jarRepositories.xml
