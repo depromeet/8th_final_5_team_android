@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.go_with_dog">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,16 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Go_with_dog">
 
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MainActivity" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+        <activity
+            android:name=".sign.LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="kakao85f77e61ffaa13912af3e2e1a45ce7ee://oauth"
+                    android:scheme="kakao85f77e61ffaa13912af3e2e1a45ce7ee" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".LoginActivity"
-            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

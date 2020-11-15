@@ -1,4 +1,4 @@
-package com.example.go_with_dog
+package com.example.go_with_dog.sign
 
 import android.content.Context
 import android.widget.Toast

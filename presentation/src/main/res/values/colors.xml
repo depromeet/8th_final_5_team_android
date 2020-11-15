@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="main_orange">#FFB36D</color>
     <color name="pink">#FF7787</color>
+    <color name="grey_1">#E0E0E0</color>
+    <color name="grey_2">#828282</color>
     <color name="black_1">#333333</color>
     <color name="black_2">#999999</color>
     <color name="black_3">#D3D3D3</color>
     <color name="white">#FFFFFFFF</color>
 
     <color name="naver_green">#21CD62</color>
+    <color name="kakao_yellow">#FFCD00</color>
 </resources>

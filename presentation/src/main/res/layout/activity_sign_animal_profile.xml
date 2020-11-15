@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="@color/white"
+        android:textAlignment="center"
+        android:title="@string/sign_animal_info"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pb_sign"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:progressBackgroundTint="@color/grey_1"
+        android:progressTint="@color/main_orange"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        tools:progress="50" />
+
+    <TextView
+        android:id="@+id/tv_profile_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="@string/sign_animal_profile_desc"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pb_sign" />
+
+    <View
+        android:id="@+id/view_main_profile"
+        android:layout_width="80dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="11dp"
+        android:background="@drawable/ic_profile_main_prev"
+        app:layout_constraintEnd_toStartOf="@id/view_sub_profile2"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/view_sub_profile1"
+        app:layout_constraintTop_toBottomOf="@id/tv_profile_desc" />
+
+    <View
+        android:id="@+id/view_sub_profile1"
+        android:layout_width="59dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/ic_profile_prev"
+        app:layout_constraintEnd_toStartOf="@id/view_main_profile"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_profile_desc" />
+
+    <View
+        android:id="@+id/view_sub_profile2"
+        android:layout_width="59dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="27dp"
+        android:background="@drawable/ic_profile_prev"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/view_main_profile"
+        app:layout_constraintTop_toBottomOf="@id/tv_profile_desc" />
+
+    <TextView
+        android:id="@+id/tv_animal_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="21dp"
+        android:text="@string/sign_animal_name"
+        android:textColor="@color/black_1"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_main_profile" />
+
+    <EditText
+        android:id="@+id/et_animal_name"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_ractangle_radius_stroke_8dp"
+        android:backgroundTint="@color/grey_1"
+        android:hint="@string/sign_animal_name_hint"
+        android:paddingStart="16dp"
+        android:textColorHint="@color/black_2"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_animal_name" />
+
+    <TextView
+        android:id="@+id/tv_animal_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/sign_animal_gender"
+        android:textColor="@color/black_1"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_animal_name" />
+
+    <TextView
+        android:id="@+id/tv_male"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/bg_ractangle_radius_stroke_8dp"
+        android:backgroundTint="@color/grey_1"
+        android:gravity="center"
+        android:text="@string/sign_animal_male"
+        android:textColor="@color/black_2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/tv_female"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_animal_gender" />
+
+    <TextView
+        android:id="@+id/tv_female"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/bg_ractangle_radius_stroke_8dp"
+        android:backgroundTint="@color/grey_1"
+        android:gravity="center"
+        android:text="@string/sign_animal_female"
+        android:textColor="@color/black_2"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_male"
+        app:layout_constraintTop_toBottomOf="@id/tv_animal_gender" />
+
+    <TextView
+        android:id="@+id/tv_animal_kinds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/sign_animal_age"
+        android:textColor="@color/black_1"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_male" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/tv_select_age"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_ractangle_radius_stroke_8dp"
+        android:backgroundTint="@color/grey_1"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="14dp"
+        android:text="@string/sign_animal_age_hint"
+        android:textColor="@color/black_2"
+        android:textSize="12sp"
+        app:icon="@drawable/ic_expand"
+        app:iconGravity="end"
+        app:iconSize="16dp"
+        app:iconTint="@color/black_1"
+        app:layout_constraintTop_toBottomOf="@id/tv_animal_kinds" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_ractangle_radius_solid_8dp"
+        android:backgroundTint="@color/black_3"
+        android:gravity="center"
+        android:text="@string/sign_animal_next"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

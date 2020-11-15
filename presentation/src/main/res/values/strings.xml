@@ -1,10 +1,32 @@
 <resources>
-    <string name="app_name">go_with_dog</string>
+    <string name="app_name">같이가개</string>
 
     // naver login key string
     <string name="naver_client_id">7FqNdStEbLxeIeH0FcSw</string>
     <string name="naver_client_secret">L2rTzOkayi</string>
     <string name="naver_client_name">같이가개</string>
 
+    <string name="login">간편 로그인</string>
     <string name="start_naver">네이버로 시작하기</string>
+    <string name="start_kakao">카카오로 시작하기</string>
+
+    <string name="sign_animal_info">반려견 정보</string>
+    <string name="sign_animal_profile_desc">가장 대표적으로 보여질 반려견 사진 3장을 골라주세요.</string>
+    <string name="sign_animal_name">반려견 이름</string>
+    <string name="sign_animal_name_hint">6자 이내로 입력해주세요.</string>
+    <string name="sign_animal_gender">반려견 성별</string>
+    <string name="sign_animal_male">남아</string>
+    <string name="sign_animal_female">여아</string>
+    <string name="sign_animal_age">반려견 나이</string>
+    <string name="sign_animal_age_hint">나이를 선택해주세요.</string>
+    <string name="sign_animal_next">다음으로</string>
+    <string name="sign_animal_kinds">견종</string>
+    <string name="sign_animal_kinds_hint">견종을 선택해주세요.</string>
+    <string name="sign_animal_spay">중성화 여부</string>
+    <string name="sign_animal_spayed">중성화 완료</string>
+    <string name="sign_animal_not_spayed">중성화 전</string>
+    <string name="sign_animal_vaccination">예방접종 여부</string>
+    <string name="sign_animal_vaccinated">완료</string>
+    <string name="sign_animal_not_vaccinated">미완료</string>
+    <string name="sign_animal_vaccinating">진행 중</string>
 </resources>

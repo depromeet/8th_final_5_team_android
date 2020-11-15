@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="viewModel"
-            type="com.example.go_with_dog.LoginViewModel" />
+            type="com.example.go_with_dog.sign.LoginViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -18,10 +20,56 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginBottom="12dp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_naver_login"
+            app:layout_constraintBottom_toTopOf="@+id/view_divider"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@color/black_3" />
+
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="32dp"
+            android:background="@color/grey_1"
+            app:layout_constraintBottom_toTopOf="@id/btn_kakao_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vp_login" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingHorizontal="10dp"
+            android:text="@string/login"
+            android:textColor="@color/grey_2"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@id/view_divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/view_divider" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_kakao_login"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/kakao_yellow"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/start_kakao"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:cornerRadius="8dp"
+            app:icon="@drawable/ic_kakao"
+            app:iconGravity="textStart"
+            app:layout_constraintBottom_toTopOf="@id/btn_naver_login"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_naver_login"
@@ -33,10 +81,10 @@
             android:backgroundTint="@color/naver_green"
             android:insetTop="0dp"
             android:insetBottom="0dp"
+            android:onClick="@{() -> viewModel.onClickNaverLogin()}"
             android:text="@string/start_naver"
             android:textColor="@color/white"
             android:textSize="16sp"
-            android:onClick="@{() -> viewModel.onClickNaverLogin()}"
             app:cornerRadius="8dp"
             app:icon="@drawable/ic_naver"
             app:iconGravity="textStart"

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:backgroundTint="@color/white"
+            android:navigationIcon="?attr/homeAsUpIndicator"
+            android:textAlignment="center"
+            android:title="@string/sign_animal_info"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/pb_sign"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:progressBackgroundTint="@color/grey_1"
+            android:progressTint="@color/main_orange"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            tools:progress="50" />
+
+        <TextView
+            android:id="@+id/tv_animal_kinds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/sign_animal_kinds"
+            android:textColor="@color/black_1"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pb_sign" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_animal_kinds"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_ractangle_radius_stroke_8dp"
+            android:backgroundTint="@color/grey_1"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="14dp"
+            android:text="@string/sign_animal_kinds_hint"
+            android:textColor="@color/black_2"
+            android:textSize="12sp"
+            app:icon="@drawable/ic_expand"
+            app:iconGravity="end"
+            app:iconSize="16dp"
+            app:iconTint="@color/black_1"
+            app:layout_constraintTop_toBottomOf="@id/tv_animal_kinds" />
+
+        <TextView
+            android:id="@+id/tv_animal_spay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/sign_animal_spay"
+            android:textColor="@color/black_1"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_animal_kinds" />
+
+        <TextView
+            android:id="@+id/tv_animal_spayed"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/bg_ractangle_radius_stroke_8dp"
+            android:backgroundTint="@color/grey_1"
+            android:gravity="center"
+            android:text="@string/sign_animal_spayed"
+            android:textColor="@color/black_2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/tv_animal_not_spayed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_animal_spay" />
+
+        <TextView
+            android:id="@+id/tv_animal_not_spayed"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_ractangle_radius_stroke_8dp"
+            android:backgroundTint="@color/grey_1"
+            android:gravity="center"
+            android:text="@string/sign_animal_not_spayed"
+            android:textColor="@color/black_2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_animal_spayed"
+            app:layout_constraintTop_toBottomOf="@id/tv_animal_spay" />
+
+        <TextView
+            android:id="@+id/tv_animal_vaccination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/sign_animal_vaccination"
+            android:textColor="@color/black_1"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_animal_spayed" />
+
+        <TextView
+            android:id="@+id/tv_animal_vaccinated"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/bg_ractangle_radius_stroke_8dp"
+            android:backgroundTint="@color/grey_1"
+            android:gravity="center"
+            android:text="@string/sign_animal_vaccinated"
+            android:textColor="@color/black_2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/tv_animal_vaccinating"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_animal_vaccination" />
+
+        <TextView
+            android:id="@+id/tv_animal_vaccinating"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:background="@drawable/bg_ractangle_radius_stroke_8dp"
+            android:backgroundTint="@color/grey_1"
+            android:gravity="center"
+            android:text="@string/sign_animal_vaccinating"
+            android:textColor="@color/black_2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/tv_animal_not_vaccinated"
+            app:layout_constraintStart_toEndOf="@id/tv_animal_vaccinated"
+            app:layout_constraintTop_toBottomOf="@id/tv_animal_vaccination" />
+
+        <TextView
+            android:id="@+id/tv_animal_not_vaccinated"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/bg_ractangle_radius_stroke_8dp"
+            android:backgroundTint="@color/grey_1"
+            android:gravity="center"
+            android:text="@string/sign_animal_not_vaccinated"
+            android:textColor="@color/black_2"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_animal_vaccinating"
+            app:layout_constraintTop_toBottomOf="@id/tv_animal_vaccination" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/bg_ractangle_radius_solid_8dp"
+            android:backgroundTint="@color/black_3"
+            android:gravity="center"
+            android:text="@string/sign_animal_next"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,4 +1,4 @@
-package com.example.go_with_dog
+package com.example.go_with_dog.sign
 
 import com.example.go_with_dog.base.BaseViewModel
 import com.example.go_with_dog.util.SingleLiveEvent

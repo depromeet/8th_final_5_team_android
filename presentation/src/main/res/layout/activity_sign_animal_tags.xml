@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:backgroundTint="@color/white"
+            android:navigationIcon="?attr/homeAsUpIndicator"
+            android:textAlignment="center"
+            android:title="@string/sign_animal_info" />
+
+        <ProgressBar
+            android:id="@+id/pb_sign"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:progressBackgroundTint="@color/grey_1"
+            android:progressTint="@color/main_orange"
+            tools:progress="50" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="%s의 특징"
+            android:textColor="@color/black_1"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_ractangle_radius_16dp"
+                android:backgroundTint="@color/grey_1"
+                android:gravity="center"
+                android:paddingHorizontal="20dp"
+                android:text="#적극적"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_ractangle_radius_16dp"
+                android:backgroundTint="@color/grey_1"
+                android:gravity="center"
+                android:paddingHorizontal="20dp"
+                android:text="#적극적"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_ractangle_radius_16dp"
+                android:backgroundTint="@color/grey_1"
+                android:gravity="center"
+                android:paddingHorizontal="20dp"
+                android:text="#적극적"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_ractangle_radius_16dp"
+                android:backgroundTint="@color/grey_1"
+                android:gravity="center"
+                android:paddingHorizontal="20dp"
+                android:text="#적극적"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_ractangle_radius_16dp"
+                android:backgroundTint="@color/grey_1"
+                android:gravity="center"
+                android:paddingHorizontal="20dp"
+                android:text="#적극적"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_ractangle_radius_16dp"
+                android:backgroundTint="@color/grey_1"
+                android:gravity="center"
+                android:paddingHorizontal="20dp"
+                android:text="#적극적"
+                android:textSize="12sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_ractangle_radius_16dp"
+                android:backgroundTint="@color/grey_1"
+                android:gravity="center"
+                android:paddingHorizontal="20dp"
+                android:text="#적극적"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_ractangle_radius_16dp"
+                android:backgroundTint="@color/grey_1"
+                android:gravity="center"
+                android:paddingHorizontal="20dp"
+                android:text="#적극적"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>
