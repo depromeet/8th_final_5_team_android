@@ -61,4 +61,6 @@ dependencies {
 
     // Life-cycle Extension
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+
+    implementation "com.yuyakaido.android:card-stack-view:2.3.4"
 }
