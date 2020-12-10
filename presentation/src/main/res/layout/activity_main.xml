@@ -6,14 +6,17 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginVertical="20dp">
+        android:background="@color/white_2"
+        android:paddingVertical="12dp">
 
         <Spinner
             android:id="@+id/sp_search"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="28dp"
+            android:background="@drawable/drawble_round_rectangle"
             app:layout_constraintEnd_toStartOf="@+id/iv_search_chat"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -24,23 +27,27 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
             android:src="@drawable/ic_chatting"
+            android:tint="@color/black_1"
             app:layout_constraintEnd_toStartOf="@+id/iv_search_profile"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/sp_search"
+            app:layout_constraintBottom_toBottomOf="@+id/sp_search"/>
 
         <ImageView
             android:id="@+id/iv_search_profile"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_marginEnd="24dp"
-            android:src="@drawable/ic_chatting"
+            android:src="@drawable/ic_dog3"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/sp_search"
+            app:layout_constraintBottom_toBottomOf="@+id/sp_search" />
 
         <com.yuyakaido.android.cardstackview.CardStackView
+            android:id="@+id/rv_search"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="54dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="18dp"
             android:layout_marginStart="24dp"
             android:layout_marginEnd="24dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -50,20 +57,21 @@
 
         <ImageView
             android:id="@+id/iv_search_cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
             android:layout_marginEnd="20dp"
-            android:src="@drawable/ic_chatting"
+            android:src="@drawable/ic_cancel"
+            app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/iv_search_check"
             app:layout_constraintBottom_toBottomOf="parent" />
 
         <ImageView
             android:id="@+id/iv_search_check"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
             android:layout_marginEnd="24dp"
-            android:src="@drawable/ic_chatting"
+            android:src="@drawable/ic_logo_orange"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/iv_search_cancel"
             app:layout_constraintBottom_toBottomOf="parent" />

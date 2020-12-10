@@ -2,20 +2,16 @@ package com.example.go_with_dog.view.adapter
 
 import com.example.go_with_dog.R
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.go_with_dog.databinding.ItemCardBinding
 import com.example.go_with_dog.model.SearchUiModel
 
-class CardStackAdapter(
+class SearchCardStackAdapter(
         private var cards: List<SearchUiModel> = emptyList()
-) : RecyclerView.Adapter<CardStackAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<SearchCardStackAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(
@@ -29,10 +25,6 @@ class CardStackAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(cards[position])
-
-//        Glide.with(holder.image)
-//            .load(card.url)
-//            .into(holder.image)
 //
 //        holder.itemView.setOnClickListener { v ->
 //            Toast.makeText(v.context, card.name, Toast.LENGTH_SHORT).show()

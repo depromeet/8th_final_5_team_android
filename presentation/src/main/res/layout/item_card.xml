@@ -13,9 +13,10 @@
         android:layout_height="match_parent"
         android:background="?attr/selectableItemBackground"
         android:foreground="?attr/selectableItemBackground"
+        app:cardElevation="4dp"
         app:cardUseCompatPadding="true"
         app:cardPreventCornerOverlap="false"
-        app:cardCornerRadius="8dp"
+        app:cardCornerRadius="18dp"
         app:cardBackgroundColor="@android:color/white">
 
         <com.makeramen.roundedimageview.RoundedImageView
@@ -23,7 +24,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            app:riv_corner_radius="8dp" />
+            android:src="@{item.background}"
+            app:riv_corner_radius="18dp" />
 
         <LinearLayout
             android:orientation="vertical"
@@ -40,7 +42,7 @@
                 android:text="@{item.name}"
                 android:textStyle="bold"
                 android:textColor="@android:color/white"
-                android:textSize="26sp" />
+                android:textSize="30sp" />
 
             <TextView
                 android:id="@+id/item_sub_name"
@@ -49,7 +51,20 @@
                 android:text="@{item.dog}"
                 android:textStyle="bold"
                 android:textColor="@android:color/white"
-                android:textSize="20sp" />
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/item_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_round_white_stroke"
+                android:paddingVertical="4dp"
+                android:paddingHorizontal="12dp"
+                android:layout_marginTop="8dp"
+                android:text="@{item.category}"
+                android:textStyle="normal"
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
 
         </LinearLayout>
 
@@ -59,11 +74,31 @@
             android:layout_height="match_parent"
             android:background="@drawable/overlay_black">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/skip_white_120dp"
-                android:layout_gravity="center" />
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_rectangle_solid"
+                android:paddingVertical="26dp"
+                android:paddingHorizontal="20dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_logo" />
+
+                <TextView
+                    android:layout_marginTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textAlignment="center"
+                    android:text="@string/like" />
+            </LinearLayout>
 
         </FrameLayout>
 
@@ -73,11 +108,31 @@
             android:layout_height="match_parent"
             android:background="@drawable/overlay_black">
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_rectangle_solid"
+                android:paddingVertical="26dp"
+                android:paddingHorizontal="20dp">
+
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/like_white_120dp"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:src="@drawable/ic_logo" />
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textAlignment="center"
+                android:text="@string/like" />
+            </LinearLayout>
 
         </FrameLayout>
 
